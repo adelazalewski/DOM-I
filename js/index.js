@@ -83,9 +83,21 @@ navBar[1].textContent = siteContent["nav"]["nav-item-2"];
 navBar[2].textContent = siteContent["nav"]["nav-item-3"];
 navBar[3].textContent = siteContent["nav"]["nav-item-4"];
 navBar[4].textContent = siteContent["nav"]["nav-item-5"];
-
-
-
+navBar[0].style.color = "green";
+navBar[1].style.color = "green";
+navBar[2].style.color = "green";
+navBar[3].style.color = "green";
+navBar[4].style.color = "green";
+const newAnchor = document.createElement("a");
+newAnchor.href = "https://github.com/adelazalewski";
+newAnchor.textContent = "Adela";
+const navigation = document.querySelector('nav');
+navigation.prepend(newAnchor);
+const buttonInTheNav = document.createElement('button');
+buttonInTheNav.textContent = "Boom!";
+buttonInTheNav.style.color = "green";
+buttonInTheNav.style.background = "gray";
+navigation.appendChild(buttonInTheNav);
 
 
 

@@ -45,8 +45,9 @@ let headerImg = document.getElementById("cta-img");
 headerImg.src = siteContent["cta"]["img-src"];
 
 const header = document.querySelector('h1');
-header.innerHTML = "Dom <br> is <br> awesome";
-//siteContent["cta"]["h1"];
+//header.innerHTML = "Dom <br> is <br> awesome";
+const splitThis = siteContent["cta"]["h1"].split(' ');
+header.innerHTML = splitThis[0] + "<br>" + splitThis[1] + "<br>" + splitThis[2];
 
 const buttonHeader = document.querySelector('button');
 buttonHeader.textContent = siteContent["cta"]["button"];  //"Get Started";
@@ -65,7 +66,9 @@ paragraphs[3].textContent = siteContent["main-content"]["product-content"]; //"P
 
 paragraphs[4].textContent = siteContent["main-content"]["vision-content"]; //"Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."; 
 
-paragraphs[5].innerHTML = "123 Way 456 Street <br> Somewhere, USA";
+//paragraphs[5].innerHTML = "123 Way 456 Street <br> Somewhere, USA";
+const split = siteContent["contact"]["address"].split(" ");
+paragraphs[5].innerHTML = split[0] + split[1] + split[2] + split[3] + "<br>" + split[4] + split[5]; 
 
 paragraphs[6].textContent = siteContent["contact"]["phone"]; //"1 (888) 888-8888";
 paragraphs[7].textContent = siteContent["contact"]["email"]; //"sales@greatidea.io";

@@ -45,7 +45,8 @@ let headerImg = document.getElementById("cta-img");
 headerImg.src = siteContent["cta"]["img-src"];
 
 const header = document.querySelector('h1');
-header.textContent = siteContent["cta"]["h1"]; //"Dom is awesome";
+header.innerHTML = "Dom <br> is <br> awesome";
+//siteContent["cta"]["h1"];
 
 const buttonHeader = document.querySelector('button');
 buttonHeader.textContent = siteContent["cta"]["button"];  //"Get Started";
@@ -64,7 +65,8 @@ paragraphs[3].textContent = siteContent["main-content"]["product-content"]; //"P
 
 paragraphs[4].textContent = siteContent["main-content"]["vision-content"]; //"Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."; 
 
-paragraphs[5].textContent = siteContent["contact"]["address"]; //"123 Way 456 Street" + `${<br>} Somewhere, USA ${</br>}`;
+paragraphs[5].innerHTML = "123 Way 456 Street <br> Somewhere, USA";
+
 paragraphs[6].textContent = siteContent["contact"]["phone"]; //"1 (888) 888-8888";
 paragraphs[7].textContent = siteContent["contact"]["email"]; //"sales@greatidea.io";
 paragraphs[8].textContent = siteContent["footer"]["copyright"];"Copyright Great Idea! 2018";
@@ -91,6 +93,7 @@ navBar[4].style.color = "green";
 const newAnchor = document.createElement("a");
 newAnchor.href = "https://github.com/adelazalewski";
 newAnchor.textContent = "Adela";
+newAnchor.style.color = "green";
 const navigation = document.querySelector('nav');
 navigation.prepend(newAnchor);
 const buttonInTheNav = document.createElement('button');
